@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: toto_backend_development
+
+test:
+  <<: *default
+  database: toto_backend_test
+
+production:
+  <<: *default
+  database: toto_backend_production
+  username: toto_backend
+  password: <%= ENV['TOTO_BACKEND_DATABASE_PASSWORD'] %>
