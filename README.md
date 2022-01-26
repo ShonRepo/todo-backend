@@ -8,7 +8,7 @@ Information:
     - Ruby 2.7.0
   
 * System dependencies
-    - Rails >6.0
+    - Rails > 6.0
     - PostgreSQL 13
 
 * Install gems
