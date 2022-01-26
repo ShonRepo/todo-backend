@@ -22,7 +22,6 @@ Information:
     - `rails db:seed`
 
 * To run the test suite
-    - `rails db:create`
     - `rails db:migrate RAILS_ENV=test`
     - `rspec`
     
