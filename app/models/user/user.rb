@@ -19,10 +19,18 @@ class User::User < ApplicationRecord
   ## Validations
   ######
 
-  validates :full_name, presence: true
+  validates_presence_of :full_name, :password
 
   validates :email, uniqueness: true,
                     presence: true,
                     format: { with: /\A([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}\z/ },
                     on: %i[create update]
+
+  ######
+  ## Methods
+  ######
+
+  def json_for_api
+    self.as_json(only: i%[id, email, full_name])
+  end
 end

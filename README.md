@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This service serves as a backend for the task planning system
 
-Things you may want to cover:
+Information:
 
 * Ruby version
-
+    - Ruby 2.7.0
+  
 * System dependencies
+    - Rails >6.0
+    - PostgreSQL 13
 
-* Configuration
+* Install gems
+    - `bundle install`
 
 * Database creation
+    - `rails db:create`
 
-* Database initialization
+* Database initialization 
+    - `rails db:migrate`
+    - `rails db:seed`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To run the test suite
+    - `rails db:create`
+    - `rails db:migrate RAILS_ENV=test`
+    - `rspec`
+    
+* Startup development
+    - `foreman start`

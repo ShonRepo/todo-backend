@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: toto_backend_development
+  database: todo_backend_development
 
 test:
   <<: *default
-  database: toto_backend_test
+  database: todo_backend_test
 
 production:
   <<: *default
-  database: toto_backend_production
-  username: toto_backend
-  password: <%= ENV['TOTO_BACKEND_DATABASE_PASSWORD'] %>
+  database: todo_backend_production
+  username: todo_backend
+  password: <%= ENV['todo_BACKEND_DATABASE_PASSWORD'] %>
